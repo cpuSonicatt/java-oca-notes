@@ -645,7 +645,7 @@ We set our references, which are just words and don't point to any object:
 String one, two;
 ```
 
-<img src="/Users/jscrase/Important/JavaThingies/image-20200325094219577.png" alt="image-20200325094219577" style="zoom: 50%;" />	
+<img src="./image-20200325094219577.png" alt="image-20200325094219577" style="zoom: 50%;" />	
 
 
 
@@ -656,7 +656,7 @@ one = new String("a");
 two = new String("b");
 ```
 
-<img src="/Users/jscrase/Important/JavaThingies/image-20200325094257098.png" alt="image-20200325094257098" style="zoom:50%;" />
+<img src="./image-20200325094257098.png" alt="image-20200325094257098" style="zoom:50%;" />
 
 
 
@@ -666,7 +666,7 @@ We then change the variable `one` to point to whatever the variable `two` is poi
 one = two;
 ```
 
-<img src="/Users/jscrase/Important/JavaThingies/image-20200325094316743.png" alt="image-20200325094316743" style="zoom:50%;" />
+<img src="./image-20200325094316743.png" alt="image-20200325094316743" style="zoom:50%;" />
 
 
 
@@ -676,7 +676,7 @@ We than declare and initialise a third variable called `three` and set it to wha
 String three = one;
 ```
 
-<img src="/Users/jscrase/Important/JavaThingies/image-20200325094328465.png" alt="image-20200325094328465" style="zoom:50%;" />
+<img src="./image-20200325094328465.png" alt="image-20200325094328465" style="zoom:50%;" />
 
 
 
@@ -686,7 +686,7 @@ And finally, we set the variable `one` to `null`:
 one = null;
 ```
 
-<img src="/Users/jscrase/Important/JavaThingies/image-20200325094338577.png" alt="image-20200325094338577" style="zoom:50%;" />
+<img src="./image-20200325094338577.png" alt="image-20200325094338577" style="zoom:50%;" />
 
 
 
@@ -1002,7 +1002,7 @@ class Equoddities { // :^)
 }
 ```
 
-<img src="/Users/jscrase/Important/JavaThingies/image-20200325094356181.png" alt="image-20200325094356181" style="zoom:50%;" />
+<img src="./image-20200325094356181.png" alt="image-20200325094356181" style="zoom:50%;" />
 
 
 
