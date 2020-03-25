@@ -1618,7 +1618,7 @@ System.out.println("Hello".substring(3, 1)); // throws exception
 >
 >   `"Hello, World!".substring(2, 8);`
 >
->   For example: He==llo, W==orld! 
+>   For example: He**llo, W**orld! 
 
 
 
