@@ -142,7 +142,7 @@ public class User {
         			// Local variable
         
         if (hashSaltPassword.equals(getPasswordFromDbByUser(username))) {
-            											 // Parameter
+            				                   // Parameter
             return true;
         }
         return false;
@@ -404,20 +404,20 @@ class MyClass {
 
 Typically, a class definition would look like this:
 
-1.  Modifier: such as `private` or `public` [^1.1]
+1.  Modifier: such as `private` or `public` \*
 2.  The keyword `class`
 3.  The name of your class
-4.  Any super classes that are extended [^1.1] [^1.2]
+4.  Any super classes that are extended \* \*\*
     1.  The keyword `extends`
     2.  The name of the super class
-5.  Any interfaces that are inherited [^1.1] [^1.3]
+5.  Any interfaces that are inherited \* \*\*\*
     1.  The keyword `inherits`
     2.  The name of the interface 
 6.  Curly brackets for the body of the class
 
-[^1.1]: Optional
-[^1.2]: This can be done once
-[^1.3]: This can be done a maximum of 65535 times
+\* Optional
+\*\* This can be done once
+\*\*\* This can be done a lot of times
 
 
 
@@ -440,8 +440,8 @@ Typically, a class definition would look like this:
 Initialising a vairable is the same as giving it a value.
 
 ```java
-private int age;		// uninitialised
-private int age = 19;	// initialised
+private int age;      // uninitialised
+private int age = 19; // initialised
 ```
 
 It can be done at declaration, within the constructor, or within a method.
@@ -512,7 +512,10 @@ The 8 primitivies are:
 | `float`   | single-precision 32-bit IEEE 754 floating point | Big negative number | Big positive number    | N/A                                                          | `0.0F`                                            |
 | `double`  | double-precision 64-bit IEEE 754 floating point | Big negative number | Big positive number    | N/A                                                          | `0.0D`                                            |
 | `boolean` | Two-state conditional flag                      | N/A                 | N/A                    | `true`/`false`                                               | `false`                                           |
-| `char`    | Single 16-bit Unicode character                 | `'\u0000'` or `0`   | `'\uffff' ` or `65535` | A single Unicode character e.g. `'a'`,`'?'`' etc.[^1.4][^1.5] | `'\u0000'`                                        |
+| `char`    | Single 16-bit Unicode character                 | `'\u0000'` or `0`   | `'\uffff' ` or `65535` | A single Unicode character e.g. `'a'`,`'?'`' etc. \* \*\* | `'\u0000'`                                        |
+
+\* You can also initalise them with an `int`. It will then be converted to its corrosponding ASCII character. e.g. `63` would be `?`.
+\*\* You also must use single quotations for `char` like so: `char c = 'a';`
 
 ```java
 byte b = 10;
@@ -562,11 +565,6 @@ int hex30 = 0x1E; // prefix: 0x/0X
 int oct30 = 036; // prefix: 0
 // all print 30
 ```
-
-
-
-[^1.4]: You can also initalise them with an `int`. It will then be converted to its corrosponding ASCII character. e.g. `63` would be `?`.
-[^1.5]: You also must use single quotations for `char` like so: `char c = 'a';`
 
 #### Reference types (objects)
 
