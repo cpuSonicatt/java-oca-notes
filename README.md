@@ -415,9 +415,9 @@ Typically, a class definition would look like this:
     2.  The name of the interface 
 6.  Curly brackets for the body of the class
 
-\* Optional
-\*\* This can be done once
-\*\*\* This can be done a lot of times
+\* Optional  
+\*\* This can be done once  
+\*\*\* This can be done a lot of times  
 
 
 
@@ -514,8 +514,8 @@ The 8 primitivies are:
 | `boolean` | Two-state conditional flag                      | N/A                 | N/A                    | `true`/`false`                                               | `false`                                           |
 | `char`    | Single 16-bit Unicode character                 | `'\u0000'` or `0`   | `'\uffff' ` or `65535` | A single Unicode character e.g. `'a'`,`'?'`' etc. \* \*\* | `'\u0000'`                                        |
 
-\* You can also initalise them with an `int`. It will then be converted to its corrosponding ASCII character. e.g. `63` would be `?`.
-\*\* You also must use single quotations for `char` like so: `char c = 'a';`
+\* You can also initalise them with an `int`. It will then be converted to its corrosponding ASCII character. e.g. `63` would be `?`.  
+\*\* You also must use single quotations for `char` like so: `char c = 'a';`  
 
 ```java
 byte b = 10;
