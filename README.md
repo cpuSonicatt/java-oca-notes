@@ -512,7 +512,10 @@ The 8 primitivies are:
 | `float`   | single-precision 32-bit IEEE 754 floating point | Big negative number | Big positive number    | N/A                                                          | `0.0F`                                            |
 | `double`  | double-precision 64-bit IEEE 754 floating point | Big negative number | Big positive number    | N/A                                                          | `0.0D`                                            |
 | `boolean` | Two-state conditional flag                      | N/A                 | N/A                    | `true`/`false`                                               | `false`                                           |
-| `char`    | Single 16-bit Unicode character                 | `'\u0000'` or `0`   | `'\uffff' ` or `65535` | A single Unicode character e.g. `'a'`,`'?'`' etc.[^1.4][^1.5] | `'\u0000'`                                        |
+| `char`    | Single 16-bit Unicode character                 | `'\u0000'` or `0`   | `'\uffff' ` or `65535` | A single Unicode character e.g. `'a'`,`'?'`' etc. * | `'\u0000'`                                        |
+
+
+* You can also initalise them with an `int`. It will then be converted to its corrosponding ASCII character. e.g. `63` would be `?`. Also, you also must use single quotations for `char` like so: `char c = 'a';`
 
 ```java
 byte b = 10;
@@ -563,10 +566,6 @@ int oct30 = 036; // prefix: 0
 // all print 30
 ```
 
-
-
-[^1.4]: You can also initalise them with an `int`. It will then be converted to its corrosponding ASCII character. e.g. `63` would be `?`.
-[^1.5]: You also must use single quotations for `char` like so: `char c = 'a';`
 
 #### Reference types (objects)
 
