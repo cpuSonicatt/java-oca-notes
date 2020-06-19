@@ -142,7 +142,7 @@ public class User {
         			// Local variable
         
         if (hashSaltPassword.equals(getPasswordFromDbByUser(username))) {
-            				                   // Parameter
+            											 // Parameter
             return true;
         }
         return false;
@@ -404,20 +404,20 @@ class MyClass {
 
 Typically, a class definition would look like this:
 
-1.  Modifier: such as `private` or `public` \*
+1.  Modifier: such as `private` or `public` [^1.1]
 2.  The keyword `class`
 3.  The name of your class
-4.  Any super classes that are extended \* \*\*
+4.  Any super classes that are extended [^1.1] [^1.2]
     1.  The keyword `extends`
     2.  The name of the super class
-5.  Any interfaces that are inherited \* \*\*\*
+5.  Any interfaces that are inherited [^1.1] [^1.3]
     1.  The keyword `inherits`
     2.  The name of the interface 
 6.  Curly brackets for the body of the class
 
-\* Optional  
-\*\* This can be done once  
-\*\*\* This can be done a lot of times  
+[^1.1]: Optional
+[^1.2]: This can be done once
+[^1.3]: This can be done a maximum of 65535 times
 
 
 
@@ -440,8 +440,8 @@ Typically, a class definition would look like this:
 Initialising a vairable is the same as giving it a value.
 
 ```java
-private int age;      // uninitialised
-private int age = 19; // initialised
+private int age;		// uninitialised
+private int age = 19;	// initialised
 ```
 
 It can be done at declaration, within the constructor, or within a method.
@@ -512,10 +512,7 @@ The 8 primitivies are:
 | `float`   | single-precision 32-bit IEEE 754 floating point | Big negative number | Big positive number    | N/A                                                          | `0.0F`                                            |
 | `double`  | double-precision 64-bit IEEE 754 floating point | Big negative number | Big positive number    | N/A                                                          | `0.0D`                                            |
 | `boolean` | Two-state conditional flag                      | N/A                 | N/A                    | `true`/`false`                                               | `false`                                           |
-| `char`    | Single 16-bit Unicode character                 | `'\u0000'` or `0`   | `'\uffff' ` or `65535` | A single Unicode character e.g. `'a'`,`'?'`' etc. \* \*\* | `'\u0000'`                                        |
-
-\* You can also initalise them with an `int`. It will then be converted to its corrosponding ASCII character. e.g. `63` would be `?`.  
-\*\* You also must use single quotations for `char` like so: `char c = 'a';`  
+| `char`    | Single 16-bit Unicode character                 | `'\u0000'` or `0`   | `'\uffff' ` or `65535` | A single Unicode character e.g. `'a'`,`'?'`' etc.[^1.4][^1.5] | `'\u0000'`                                        |
 
 ```java
 byte b = 10;
@@ -565,6 +562,11 @@ int hex30 = 0x1E; // prefix: 0x/0X
 int oct30 = 036; // prefix: 0
 // all print 30
 ```
+
+
+
+[^1.4]: You can also initalise them with an `int`. It will then be converted to its corrosponding ASCII character. e.g. `63` would be `?`.
+[^1.5]: You also must use single quotations for `char` like so: `char c = 'a';`
 
 #### Reference types (objects)
 
@@ -643,7 +645,14 @@ We set our references, which are just words and don't point to any object:
 String one, two;
 ```
 
-<img src="./image-20200325094219577.png" alt="image-20200325094219577" style="zoom: 50%;" />	
+```mermaid
+graph LR
+	one(one)
+	two(two)
+	style one fill:none,stroke:none
+	style two fill:none,stroke:none
+	
+```
 
 
 
@@ -654,7 +663,13 @@ one = new String("a");
 two = new String("b");
 ```
 
-<img src="./image-20200325094257098.png" alt="image-20200325094257098" style="zoom:50%;" />
+```mermaid
+graph LR
+	one(one)-->a("#quot;a#quot;")
+	two(two)-->b("#quot;b#quot;")
+	style one fill:none,stroke:none
+	style two fill:none,stroke:none
+```
 
 
 
@@ -664,7 +679,15 @@ We then change the variable `one` to point to whatever the variable `two` is poi
 one = two;
 ```
 
-<img src="./image-20200325094316743.png" alt="image-20200325094316743" style="zoom:50%;" />
+```mermaid
+graph LR
+	a("#quot;a#quot;")
+	one(one)-->b
+	two(two)-->b("#quot;b#quot;")
+	
+	style one fill:none,stroke:none
+	style two fill:none,stroke:none
+```
 
 
 
@@ -674,7 +697,17 @@ We than declare and initialise a third variable called `three` and set it to wha
 String three = one;
 ```
 
-<img src="./image-20200325094328465.png" alt="image-20200325094328465" style="zoom:50%;" />
+```mermaid
+graph LR
+	a("#quot;a#quot;")
+	one(one)-->b
+	two(two)-->b
+	three(three)-->b("#quot;b#quot;")
+	
+	style one fill:none,stroke:none
+	style two fill:none,stroke:none
+	style three fill:none,stroke:none
+```
 
 
 
@@ -684,7 +717,17 @@ And finally, we set the variable `one` to `null`:
 one = null;
 ```
 
-<img src="./image-20200325094338577.png" alt="image-20200325094338577" style="zoom:50%;" />
+```mermaid
+graph LR
+	a("#quot;a#quot;")
+	one(one)
+	two(two)-->b
+	three(three)-->b("#quot;b#quot;")
+	
+	style one fill:none,stroke:none
+	style two fill:none,stroke:none
+	style three fill:none,stroke:none
+```
 
 
 
@@ -1000,7 +1043,16 @@ class Equoddities { // :^)
 }
 ```
 
-<img src="./image-20200325094356181.png" alt="image-20200325094356181" style="zoom:50%;" />
+```mermaid
+graph LR
+	f1(f1)-->file[myText.txt]
+	f2(f2)-->file2[myText.txt]
+	f3(f3)-->file
+	
+	style f1 fill:none,stroke:none
+	style f2 fill:none,stroke:none
+	style f3 fill:none,stroke:none
+```
 
 
 
@@ -1010,13 +1062,12 @@ class Equoddities { // :^)
 -   `|` is an OR gate
 -   `^` is an XOR gate
 
-| `x`  | `y`  | `x & y` | `x \| y` | `x ^ y` |
-| ---- | ---- | ------- | ------- | ------- |
-| `0`  | `0`  | `0`     | `0`     | `0`     |
-| `0`  | `1`  | `0`     | `1`     | `1`     |
-| `1`  | `0`  | `0`     | `1`     | `1`     |
-| `1`  | `1`  | `1`     | `1`     | `0`     |
-
+| `x`  | `y`  | `x & y` | `x | y` | `x ^ y` |
+| :--: | :--: | :-----: | :-----: | :-----: |
+| `0`  | `0`  |   `0`   |   `0`   |   `0`   |
+| `0`  | `1`  |   `0`   |   `1`   |   `1`   |
+| `1`  | `0`  |   `0`   |   `1`   |   `1`   |
+| `1`  | `1`  |   `1`   |   `1`   |   `0`   |
 
 
 
@@ -1616,7 +1667,7 @@ System.out.println("Hello".substring(3, 1)); // throws exception
 >
 >   `"Hello, World!".substring(2, 8);`
 >
->   For example: He**llo, W**orld! 
+>   For example: He==llo, W==orld! 
 
 
 
@@ -2787,7 +2838,7 @@ Carbon
 #### Method overriding
 
 1.  The method in the child class must have the same signature as the method in the parent class
-2.  m mThe method in the child class must be at least accessible or more accessible than the method in the parent class
+2.  The method in the child class must be at least accessible or more accessible than the method in the parent class
 3.  The method in the child class may not throw a checked exception that is new or broarder than the class of any exception thown in the parent method.
 4.  If the method returns a value, it must be the same or a subclass of the method in the parent class.
 
@@ -3220,7 +3271,7 @@ Feeding: Dog
 
 #### Polymorphism and method overriding
 
-1.  An overriddem method must be at least as accessible as the method it is overriding
+1.  An overridden method must be at least as accessible as the method it is overriding
 2.  A subclass cannot declare an overridden method with a new or broader exception than in the super class
 3.  Overriden methods must use covarient return types.
 
@@ -3232,13 +3283,7 @@ Feeding: Dog
 
 Exceptions are Java's way of saying "I give up." All exceptions extends from `java.lang.Throwable`:
 
-```mermaid
-graph BT;
-A(java.lang.RuntimeException)-->B(java.lang.Exception);
-B-->D(java.lang.Throwable)
-C(java.lang.Error)-->D
-D-->E(java.lang.Object)
-```
+![image-20200619113521730](./image-20200619113521730.png)
 
 
 

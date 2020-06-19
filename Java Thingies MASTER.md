@@ -2838,7 +2838,7 @@ Carbon
 #### Method overriding
 
 1.  The method in the child class must have the same signature as the method in the parent class
-2.  m mThe method in the child class must be at least accessible or more accessible than the method in the parent class
+2.  The method in the child class must be at least accessible or more accessible than the method in the parent class
 3.  The method in the child class may not throw a checked exception that is new or broarder than the class of any exception thown in the parent method.
 4.  If the method returns a value, it must be the same or a subclass of the method in the parent class.
 
@@ -3271,7 +3271,7 @@ Feeding: Dog
 
 #### Polymorphism and method overriding
 
-1.  An overriddem method must be at least as accessible as the method it is overriding
+1.  An overridden method must be at least as accessible as the method it is overriding
 2.  A subclass cannot declare an overridden method with a new or broader exception than in the super class
 3.  Overriden methods must use covarient return types.
 
@@ -3283,13 +3283,7 @@ Feeding: Dog
 
 Exceptions are Java's way of saying "I give up." All exceptions extends from `java.lang.Throwable`:
 
-```mermaid
-graph BT;
-A(java.lang.RuntimeException)-->B(java.lang.Exception);
-B-->D(java.lang.Throwable)
-C(java.lang.Error)-->D
-D-->E(java.lang.Object)
-```
+![image-20200619113521730](./image-20200619113521730.png)
 
 
 
